@@ -1,5 +1,10 @@
 # 2. gyakorlat
 
+## feladatok
+1. Számoljuk ki n!-t
+2. Adjuk meg a Fibonacci sorozat első n elemét!
+3. Programozzuk le az előadáson szereplő síknegyed-es feladatot!
+
 ## szorgalmik, gyakorlók
 1. https://www.codechef.com/problems/CCOOK
 2. Kérjünk be egy számsorozatot és írjuk ki visszafele
