@@ -15,21 +15,24 @@ Típus=”egyik sem”
 \* és / közötti különbségek!!!
 
 ## Kód
-> static void Main(string[] args) {   
->             int a, b, c;   
-> // beolvasas   
->             a = int.Parse(Console.ReadLine());   
->             b = int.Parse(Console.ReadLine());   
->             c = int.Parse(Console.ReadLine());   
->     
-> // feldolgozas   
->             if ((a-b)==(b-c)) {   
->                Console.WriteLine("szamtani");   
->             } else {   
->                 if ((a!=0 && b!=0 && c!=0) &&   
->                     ((double)a/(double)b==(double)b/(double)c)) {   
->                     Console.WriteLine("mertani");   
->                 }   
->                 else { Console.WriteLine("egyik sem"); }   
->             }   
-> }   
+<code><pre>
+    static void Main(string[] args) {   
+             int a, b, c;   
+ // beolvasas   
+             a = int.Parse(Console.ReadLine());   
+             b = int.Parse(Console.ReadLine());   
+             c = int.Parse(Console.ReadLine());   
+     
+ // feldolgozas   
+             if ((a-b)==(b-c)) {   
+                Console.WriteLine("szamtani");   
+             } else {   
+                 if ((a!=0 && b!=0 && c!=0) &&   
+                     ((double)a/(double)b==(double)b/(double)c)) {   
+                     Console.WriteLine("mertani");   
+                 }   
+                 else { Console.WriteLine("egyik sem"); }   
+             }   
+ }   
+ </pre>
+ </code>
