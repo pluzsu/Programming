@@ -1,27 +1,18 @@
 ﻿using System;
 
-public class Fibonacci
-{
-    static void Main(string[] args)
-    {
-        int x;
+public class Fibonacci {
+    static void Main(string[] args) {
+        int n;
         int f = 0;
 
-        Console.Write("x: ");
-        int.TryParse(Console.ReadLine(), out x);
+        Console.Write("n: ");
+        int.TryParse(Console.ReadLine(), out n);
+// n ellenőrzése
 
-        if (x < 1)
-        {
-            Console.WriteLine("x >= 1");
-            return;
-        }
-
-        if (x == 1 || x == 2)
-        {
+        if (n == 1 || n == 2) {
             f = 1;
         }
-        else
-        {
+        else {
             // Fibonacci számok: 1 1 2 3 5 8 13 21 ...
             // i == 2
             int fibIMinus2 = 0;
@@ -29,8 +20,7 @@ public class Fibonacci
             int fibI = 1;
             int i = 3;
 
-            while (i <= x)
-            {
+            while (i <= n) {
                 fibIMinus2 = fibIMinus1;
                 fibIMinus1 = fibI;
                 fibI = fibIMinus1 + fibIMinus2;
@@ -39,8 +29,8 @@ public class Fibonacci
 
             f = fibI;
         }
-
-        Console.WriteLine("Az {0}. Fibonacci szám: {1}", x, f);
+// csak az n- írjuk ki - Hova tegyük, hogy mindet kiírjuk?
+        Console.WriteLine("Az {0}. Fibonacci szám: {1}", n, f);
 
     }
 }
