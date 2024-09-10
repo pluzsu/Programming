@@ -1,10 +1,7 @@
 ﻿using System;
-
-public class Siknegyed
-{
+public class Siknegyed {
     //static void Main(string[] args)
-    public Siknegyed()
-    {
+    public Siknegyed()    {
         double x, y;
         int p = 0; 
 
