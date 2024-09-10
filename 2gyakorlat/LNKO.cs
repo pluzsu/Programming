@@ -1,10 +1,8 @@
 ﻿using System;
 
-public class LNKO
-{
+public class LNKO {
     //static void Main(string[] args)
-    public LNKO()
-	{
+    public LNKO() {
         int a, b;
         int lnko = 1;
 
@@ -13,13 +11,9 @@ public class LNKO
         Console.Write("b: ");
         int.TryParse(Console.ReadLine(), out b);
 
-        if (a < 1 || b < 1)
-        {
-            Console.WriteLine("a és b legyenek pozitív egész számok");
-            return;
-        }
+// ellenőrzés, hogy "a és b legyenek pozitív egész számok"
 
-        //TODO: algoritmus
+ //TODO: algoritmus
 
         Console.WriteLine("{0} és {1} legnagyobb közös osztója {2}", a, b, lnko);
 
