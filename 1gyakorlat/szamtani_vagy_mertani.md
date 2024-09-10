@@ -1,4 +1,5 @@
 ## Specifikáció
+<pre>
 Be: x ∈ Z, y ∈ Z, z ∈ Z   
 Ki: típus ∈ S   
 Ef: x < y < z   
@@ -9,20 +10,19 @@ Uf: (x + z = 2 * y) -> típus = "számtani" és
 ((x-y)=(y-z)) és típus=”számtani) vagy   
 ((x/y)=(y/z)) és típus=”mertani) vagy   
 Típus=”egyik sem”   
-
+</pre>
 
 **KÉRDÉS:** 
 \* és / közötti különbségek!!!
 
 ## Kód
-<code><pre>
-    static void Main(string[] args) {   
+<pre><code>
+static void Main(string[] args) {   
              int a, b, c;   
  // beolvasas   
              a = int.Parse(Console.ReadLine());   
              b = int.Parse(Console.ReadLine());   
              c = int.Parse(Console.ReadLine());   
-     
  // feldolgozas   
              if ((a-b)==(b-c)) {   
                 Console.WriteLine("szamtani");   
@@ -34,5 +34,5 @@ Típus=”egyik sem”
                  else { Console.WriteLine("egyik sem"); }   
              }   
  }   
- </pre>
- </code>
+</code> </pre>
+ 
