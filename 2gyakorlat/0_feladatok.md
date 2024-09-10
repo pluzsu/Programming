@@ -10,7 +10,8 @@
       - If n is 1, stop.
       - If n is even, the next number is n/2.
       - If n is odd, the next number is 3*n + 1.
-      - Continue with this process until reaching 1.   
+      - Continue with this process until reaching 1.
+        
  Here are some examples for the first few integers.
 
    2 ->  1   
