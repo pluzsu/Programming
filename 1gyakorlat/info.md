@@ -14,4 +14,4 @@ canvas, teams – felületek, információk, határidők
 ## szorgalmi, gyakorló
 1. https://codeforces.com/problemset/problem/1186/A
 2. https://codeforces.com/problemset/problem/1692/A (csak 1 teszteset bekérésével)
-feladatsor https://www.codechef.com/practice/c-sharp (ld. itt az első 2 témát)
+3. feladatsor https://www.codechef.com/practice/c-sharp (ld. itt az első 2 témát)
