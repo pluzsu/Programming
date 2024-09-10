@@ -12,3 +12,4 @@
 2. A számtani-mértani sorozatos feladatot módosítsuk: n számot tartalmazó sorozatról döntsük el, hogy számtani, vagy mértani sorozatot alkotnak-e.
 3. N napon mérjük a hőmérsékletet. Adjuk meg, hogy hány napon volt 15 foknál hidegebb!
 4. N napon mérjük a hőmérsékletet. Adjuk meg ennek az n napnak az átlaghőmérsékletét!
+5. Olvassunk be n szamot, és állapítsuk meg, hogy több páros szám van-e köztük, mint páratlan.
