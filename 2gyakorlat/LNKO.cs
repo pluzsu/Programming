@@ -11,9 +11,10 @@ public class LNKO {
         Console.Write("b: ");
         int.TryParse(Console.ReadLine(), out b);
 
-// ellenőrzés, hogy "a és b legyenek pozitív egész számok"
+// TODO: ellenőrzés, hogy "a és b legyenek pozitív egész számok"
 
- //TODO: algoritmus
+        
+// TODO: algoritmus
 
         Console.WriteLine("{0} és {1} legnagyobb közös osztója {2}", a, b, lnko);
 
