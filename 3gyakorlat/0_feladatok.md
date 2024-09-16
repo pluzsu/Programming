@@ -8,6 +8,10 @@
 5. Tároljuk n napra az eső mennyiségét. Adjuk meg az összes csapadék mennyiségét.
 6. Olvassuk be egy gps magasságadatait, és határozzuk meg az útvonal legmagasabb pontját.
 
+Változatok:
+ 1. előre létrehozott (konstans) tömbbel
+ 2. felhasználói beolvasással
+ 3. véletlenszám generálással
 
 ## szorgalmi, gyakorló feladatok
 1. N napon mérjük a hőmérsékletet. Adjuk meg, hogy hány napon volt 15 foknál hidegebb!
