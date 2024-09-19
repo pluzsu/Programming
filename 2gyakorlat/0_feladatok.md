@@ -3,8 +3,9 @@
 ## feladatok
 1. Számoljuk ki n!-t
 2. Adjuk meg a Fibonacci sorozat első n elemét!
-3. Programozzuk le az előadáson szereplő síknegyed-es feladatot!
-4. Készítsük el a számtani-mértani sorozat ellenőrző feladatot (ld. 1. gyakorlat) tömbökkel!
+3. Tippelős: véletlenszámot találj ki!
+4. Programozzuk le az előadáson szereplő síknegyed-es feladatot!
+5. Készítsük el a számtani-mértani sorozat ellenőrző feladatot (ld. 1. gyakorlat) tömbökkel!
 
 ## szorgalmik, gyakorlók
 1. https://www.codechef.com/problems/CCOOK
