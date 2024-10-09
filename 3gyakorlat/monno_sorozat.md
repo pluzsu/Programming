@@ -12,6 +12,10 @@ van  ~ nem monno
 e..u ~ 1..n-1  
 T(i) ~ s[i]>s[i+1]*/  
 ```
+
+**Algoritmus**
+
+
 **Kód**  
 A megoldás során a számsorozat tagjai helyközzel vannak elválasztva ->   
      **megoldás**, egy sor beolvasása (``` string sv = Console.ReadLine();```), majd a `Split()` segítségével egy tömbbe való feldarabolás.
