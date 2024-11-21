@@ -56,6 +56,26 @@ Uf: napok=MÁSOL(i=1..m,hanyszor(i)) és
 ```
 ### Algoritmus
 
+## 3. kimenet: az M nap alatti leghosszabb időszak hossza, amikor nem érkezett hajó;
+### Specifikáció
+```
+```
+### Algoritmus
+
+## 4. kimenet: annak a napnak a sorszáma, amikor a legtöbb hajó érkezett (több megoldás esetén az elsőt);
+### Specifikáció
+```
+```
+### Algoritmus
+
+
+## 5. kimenet: a leghosszabb időszak első és utolsó napja, amikor minden nap érkezett hajó (több megoldás esetén az elsőt)!
+### Specifikáció
+```
+```
+### Algoritmus
+
+
 ## Kód
 ```c#
 namespace hajok {
