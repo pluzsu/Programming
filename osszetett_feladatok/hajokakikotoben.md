@@ -1,3 +1,4 @@
+Bíró gyakorló feladat:
 # Hajók a kikötőben  
 Egy tengeri kikötőbe hajók érkeznek, érkezési időpontjaikat (nap sorszám) ismerjük időrendben. Az érkezéseket M napon át figyelték. Készíts programot, ...
 
