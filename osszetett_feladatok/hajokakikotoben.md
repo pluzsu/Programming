@@ -25,10 +25,83 @@ a napok később mint Sa valósul meg, hiszen a konkrét feladatoknál nem kell,
 ![image](https://github.com/user-attachments/assets/c33516d2-9eb7-4d7f-b4de-e514fe98db91)
 
 ## Feladatok
-**1. Kimenet:** Azon napok száma, amikor nem érkezett hajó.
-
-
+## 1. Kimenet:  Azon napok száma, amikor nem érkezett hajó.
+### [Specifikáció](https://progalap.elte.hu/specifikacio/?data=H4sIAAAAAAAACk1Qy2rDMBD8lWVPNmyD5fQBCy4ktL20TaGhJ8cHJZap4loJtltoQ6C9Of%2BRS74jf%2BIvKZJNCILV7mhmdtAGq7Va6EwvZK1XBhnHisG0TTMhKLpLlbltYjEYmGRWzsxUMhi5Xp3gwsGPmiGdW8xOD18M79J8Vz%2BrkicXtxM6jZ72o7vR62jsLSNrSqrM42USad8K7zMG0e72pt3tRRAEcDxUDijOgbb51W3TdKHYs%2B%2FWRSeW6Hzesj5l9Hz8m748edouK%2BgshW%2BtLBcAIJ33oXqe08Y6iQIfCWtV1RVyvMFU1hIZwTDcOG3BIELXqTJniIc0JEGXJEIK6cp9TReEIRYkKCRbg7MjOlI6Z7hGQiMLhYxIWKrq86NGFttk%2Bw9evS88qwEAAA%3D%3D)
+```
+Be: n∈N, m∈N, erk∈N[1..n]
+Sa: napok∈N[1..m]
+Ki: db∈N
+Fv: hanyszor:N->N, hanyszor(i)=DARAB(j=1..n,erk[j]=i)
+Ef: 1≤n≤1000 és 1≤m≤1000 és ∀i∈[1..n]:(1≤erk[i]≤m)
+Uf: napok=MÁSOL(i=1..m,hanyszor(i)) és
+    db=DARAB(i=1..m,napok[i]=0)
+```
+### Algoritmus  
 Vegyük észre, hogy a napok sorozat előállításához használt _hanyszor_ függvény ugyanazt csinálja, mint az 1. feladat _darab_ függvénye. A különbség a "mivel" történő hasonlításban van. Azaz ez is átadható paraméterként, és akkor egy függvény elég.
 
 ![image](https://github.com/user-attachments/assets/b146c973-16cf-4dfd-aab6-277c746f53fe)
+## 2. kimenet: egy olyan nap (a 2. és az M-1. nap között), amelyen érkezett hajó, az előző és a következő napon pedig nem;
+### Specifikáció
+```
+Be: n∈N, m∈N, erk∈N[1..n]
+Sa: napok∈N[1..m]
+Ki: db∈N,
+    van∈L, ind∈Z
+Fv: hanyszor:N->N, hanyszor(i)=DARAB(j=1..n,erk[j]=i)
+Fv: t2: N->L, t2(i)=(napok[i]>0 és napok[i-1]=0 és napok[i+1]=0)
+Ef: 1≤n≤1000 és 1≤m≤1000 és ∀i∈[1..n]:(1≤erk[i]≤m)
+Uf: napok=MÁSOL(i=1..m,hanyszor(i)) és
+    db=DARAB(i=1..m,napok[i]=0) és
+    (van,ind)=KERES(i=2..m-1,t2(i))
+```
+### Algoritmus
 
+## Kód
+```c#
+namespace hajok {
+    internal class Program {
+        static void beolvas(out int n, out int m, out int[] erk) {
+            string sv = Console.ReadLine();
+            n = int.Parse(sv.Split()[0]);
+            m = int.Parse(sv.Split()[1]);
+            erk = new int[n];
+            for (int i = 0; i < n; i++) {
+                erk[i] = int.Parse(Console.ReadLine());
+            }
+        }
+        static int darab(int[] hol, int mit) {
+            int db = 0;
+            for(int j = 0; j < hol.Length; j++) {
+                if (hol[j] == mit) db++;
+            }
+            return db;
+        }
+        static int[] masol(int[] mibol,int m) {
+            int[] mibe = new int[m];
+            for (int i=0;i<m;i++) {
+                mibe[i] = darab(mibol,i+1);
+            }
+            return mibe;
+        }
+
+        static void Main(string[] args) {
+            int n, m;
+            int[] erk;
+            beolvas(out n, out m, out erk);
+            int[] napok = masol(erk,m);
+            for (int i = 0; i < napok.Length; i++) {
+                Console.Error.Write($"{napok[i]} ");
+            }
+            int db = darab(napok,0);
+            Console.WriteLine("#");
+            Console.WriteLine(db);
+            Console.WriteLine("#");
+Console.WriteLine("-1");
+            Console.WriteLine("#");
+
+            Console.WriteLine("#");
+            Console.WriteLine("#");
+        }
+    }
+}
+```
