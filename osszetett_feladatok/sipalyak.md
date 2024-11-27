@@ -31,5 +31,57 @@ Uf: (van1,ind1)=KERES(i=1..m,hojel[1,i]>50) és (nem van1 -> ind1=-1) és
 ## [Algoritmus]()
 
 ## Kód
+### 1. verzió: globális deklaráció 
+- a fv-ekhez "megússzuk" a paraméterátadás problémáját
+```c#
+namespace sipalyak {
+    internal class Program {
+/* globálisan deklaráljuk a főbb elemeket */
+        static int[,] hoh;
+        static int palyadb;
+        static int napdb;
+/* beolvas fv. - adatok beolvasása */
+        static void beolvas() {
+            string[] sv = Console.ReadLine().Split();
+            napdb = int.Parse(sv[0]);
+            palyadb = int.Parse(sv[1]);
+            hoh = new int[napdb, palyadb];
+            for(int i = 0; i < napdb; i++) {
+                string[] sv1 = Console.ReadLine().Split(' ');
+                for (int j=0; j < palyadb; j++) {
+                    hoh[i, j] = int.Parse(sv1[j]);
+                }
+            }
+        }
+/* 1. feladat, keresés megoldása */
+        static (bool, int) keres() {
+            int ind = -1;
+            bool van = false;
+            int i = 0;
+            while (i< palyadb && hoh[0, i]<=50) {
+                i++;
+            }
+            van=(i<palyadb);
+            if (van) { ind=i+1; }
+
+            return (van, ind);
+        }
+/* fő program bíró-megfelelő kimenettel */
+        static void Main(string[] args) {
+            beolvas();
+            int ind1;
+            bool van1;
+            (van1, ind1) = keres();
+            // kiirás
+            Console.WriteLine("#");
+            Console.WriteLine(ind1);
+            Console.WriteLine("#");
+            Console.WriteLine("#");
+            Console.WriteLine("#");
+          }
+    }
+}
+```
+### 2. verzió: paraméterek átadásával
 ```c#
 ```
